@@ -1,12 +1,30 @@
-/* Navigation bar styling */
+/* 1. Reset default browser margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Ensure body has no margin */
+body {
+    margin: 0;
+}
+
+/* 3. Fix the nav to the top */
 #nav {
+    position: fixed; /* Add this */
+    top: 0; /* Stick to top */
+    left: 0; /* Stick to left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keep above other content */
+    /* Existing styles below */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: black;
     padding: 10px 20px;
     color: white;
-    height:10vh;
+    height: 10vh;
 }
 
 /* Flex containers for child divs */
