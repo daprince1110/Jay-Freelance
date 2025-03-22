@@ -1,115 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 #hero {
-    height:100vh;
-    box-sizing: border-box;
-    font-family: 'Noto Serif';
-    padding:50px 20px;
-    min-height: 100vh;
-    overflow-y: auto;
-    margin-top: 18vh;
-}
-@media (max-width:1100px){
-    #hero{
-        margin-top: 10vh;
-    }
-}
-
-@media (max-width:600px){
-    #hero{
-        margin-top: 10vh;
-    }
-}
-
-@media (max-width:474px){
-    #hero{
-        margin-top: 15vh;
-    }
-}
-
-@media (max-width:450px){
-    #hero{
-        margin-top: 10vh;
-    }
-}
-
-@media (max-width:403px){
-    #hero{
-        margin-top: 5vh;
-    }
-    #hero h1{
-        font-size: 2rem !important;
-        line-height:default;
-    }
-    #hero svg {
-        margin:0px !important;
-    }
-
-    #hero p {
-        padding:0px;
-    }
-}
-
-@media (max-width:350px){
-    #hero{
-        margin-top: 4vh;
-    }
-    #hero h1{
-        font-size:3rem !important;
-    }
-    #hero p {
-        font-size: 1.1rem !important;
-        line-height: 1.5rem !important;
-    }
-}
-
-
-
-#hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    /* Core structure */
+    height: 100vh;
     background-image: url('../assets/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(20%); /* Darkens the background image */
-    z-index: -1; /* Ensures it stays behind all content */
+    
+    /* Content alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    
+    /* Dark overlay using gradient */
+    background-color: rgba(0,0,0,0.7); /* Fallback */
+    background-blend-mode: multiply;
+
+    font-family: 'Noto Serif' !important;
 }
 
-#hero *{
-    width:100%;
-    float:center;
-    text-align:center;
+
+#hero * {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0; 
 }
 
-#hero h1 {
-    font-family: 'Noto Serif', 'Playfair Display', serif !important;
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
+#hero h1,
+#hero p {
+    color: white !important; /* Force white color */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Add text shadow for contrast */
+    z-index: 1;
 }
 
 #hero h1 span {
     color: #666; /* Faded effect for the word 'reality' */
 }
 
+#hero h1 {
+    font-family: 'Noto Serif', 'Playfair Display', serif !important;
+    font-size: 3rem; /* Responsive font size */
+    line-height: 1.2;
+}
+
 #hero svg {
-    margin: 30px 0;
-    stroke: white;
+    width: 60vw; /* Responsive width based on viewport */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1133px; /* Original size limit */
+    min-width: 300px; /* Minimum mobile size */
+    margin: 4vh 0;
+    overflow: visible;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1100px) {
+    #hero svg {
+        width: 70vw; /* Increase width on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    #hero svg {
+        width: 90vw; /* Fill more space on mobile */
+        margin: 2vh 0;
+    }
 }
 
 #hero p {
-    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: white;
-    max-width:800px;
+    line-height: 1.4;
+    max-width: 800px;
     width:100%;
-    margin:0 auto;
-    text-align: center;
     padding:10px;
+}
+
+@media (max-width:436px){
+    #hero h1{
+        font-size: 2rem;
+
+    }
 }
