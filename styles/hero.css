@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 #hero {
-    height:auto;
+    height:100vh;
     box-sizing: border-box;
     font-family: 'Noto Serif';
     padding:50px 20px;
@@ -9,6 +9,18 @@
     overflow-y: auto;
     margin-top: 18vh;
 }
+@media (max-width:1100px){
+    #hero{
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width:600px){
+    #hero{
+        margin-top: 10vh;
+    }
+}
+
 @media (max-width:474px){
     #hero{
         margin-top: 15vh;
@@ -25,6 +37,10 @@
     #hero{
         margin-top: 5vh;
     }
+    #hero h1{
+        font-size: 2rem !important;
+        line-height:default;
+    }
     #hero svg {
         margin:0px !important;
     }
@@ -34,7 +50,13 @@
     }
 }
 
-@media (max-width:340px){
+@media (max-width:350px){
+    #hero{
+        margin-top: 4vh;
+    }
+    #hero h1{
+        font-size:3rem !important;
+    }
     #hero p {
         font-size: 1.1rem !important;
         line-height: 1.5rem !important;
