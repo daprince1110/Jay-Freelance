@@ -1,6 +1,7 @@
 .data{
     display:flex;
     max-width:800px;
+    width:100%;
     margin:0 auto;
 }
 
@@ -10,4 +11,28 @@
 
 .data span {
     font-weight:bold;
+}
+
+.data-reverse{
+    flex-direction: row-reverse;
+}
+
+@media (max-width:833px){
+    .data{
+        max-width: none !important;
+        width:100%;
+    }
+    .data-reverse,
+    .data{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 834px) {
+    .data {
+        flex-direction: row;
+    }
+    .data-reverse {
+        flex-direction: row-reverse;
+    }
 }

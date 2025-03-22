@@ -8,8 +8,40 @@
     min-height: 100vh;
     overflow-y: auto;
     margin-top: 18vh;
-
 }
+@media (max-width:474px){
+    #hero{
+        margin-top: 15vh;
+    }
+}
+
+@media (max-width:450px){
+    #hero{
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width:403px){
+    #hero{
+        margin-top: 5vh;
+    }
+    #hero svg {
+        margin:0px !important;
+    }
+
+    #hero p {
+        padding:0px;
+    }
+}
+
+@media (max-width:340px){
+    #hero p {
+        font-size: 1.1rem !important;
+        line-height: 1.5rem !important;
+    }
+}
+
+
 
 #hero::before {
     content: "";
@@ -22,7 +54,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(50%); /* Darkens the background image */
+    filter: brightness(20%); /* Darkens the background image */
     z-index: -1; /* Ensures it stays behind all content */
 }
 
