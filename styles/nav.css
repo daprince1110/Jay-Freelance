@@ -1,0 +1,51 @@
+/* Navigation bar styling */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    height:10vh;
+}
+
+/* Flex containers for child divs */
+#nav > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+/* Style the middle brand name */
+#nav > p {
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 5px 10px;
+}
+
+/* Style the SVG icons container (assumed to be the last div) */
+#nav > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the SVG icons themselves */
+#nav > div:last-child svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    /* Avoid forcing a fill here to prevent hiding parts of the icon */
+}
+
+/* Ensure the SVG paths are rendered in white */
+#nav > div:last-child svg path {
+    stroke: white !important;
+    fill: none !important;
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+#hero {
+    height:auto;
+    box-sizing: border-box;
+    font-family: 'Noto Serif';
+    padding:50px 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(50%); /* Darkens the background image */
+    z-index: -1; /* Ensures it stays behind all content */
+}
+
+#hero *{
+    width:100%;
+    float:center;
+    text-align:center;
+}
+
+#hero h1 {
+    font-family: 'Noto Serif', 'Playfair Display', serif !important;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+#hero h1 span {
+    color: #666; /* Faded effect for the word 'reality' */
+}
+
+#hero svg {
+    margin: 30px 0;
+    stroke: white;
+}
+
+#hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    max-width:800px;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    padding:10px;
+}

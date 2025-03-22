@@ -1,0 +1,74 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body takes full height and has a default font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Main container for the image and text */
+.main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure both the image and div take equal space and shrink/grow properly */
+.main img,
+.main div {
+    flex: 1 1 0; 
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.main img {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+/* Text container styling */
+.main div {
+    overflow-wrap: break-word; /* Ensure long words break and wrap */
+    word-break: break-word; /* Ensure words break if necessary */
+}
+
+/* Heading styling */
+.main div h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.main div p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Optional: Add responsive behavior for smaller screens */
+@media (max-width: 1050px) {
+    .main {
+        flex-direction: column; /* Stack image and div vertically on small screens */
+    }
+
+    .main img {
+        width: 100%; /* Ensure the image takes full width on small screens */
+    }
+}

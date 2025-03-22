@@ -1,0 +1,13 @@
+.data{
+    display:flex;
+    max-width:800px;
+    margin:0 auto;
+}
+
+.data *{
+    padding:10px;
+}
+
+.data span {
+    font-weight:bold;
+}

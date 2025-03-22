@@ -1,0 +1,17 @@
+.quote{
+    text-align:center;
+    width:800px;
+    margin:0 auto;
+    text-align:center;
+    padding:20px;
+}
+
+.quote h2{
+    padding:10px;
+    font-size:2rem;
+    border-bottom: 1px solid black;
+}
+
+.quote p {
+    font-size: 1.3rem;
+}
